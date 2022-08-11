@@ -21,7 +21,7 @@ public class EventUsersJDBCDao implements EventUserDAO {
 	@Override
 	public List<EventUsers> getEventUsers(int event_id) {
 		
-		 String sql = "Select * From event_users where events_id = ?;";
+		 String sql = "Select * From event_users where event_id = ?;";
 
 	        List<EventUsers> eventUsers = new ArrayList<>();
 	        SqlRowSet result = jdbcTemplate.queryForRowSet(sql, event_id);
