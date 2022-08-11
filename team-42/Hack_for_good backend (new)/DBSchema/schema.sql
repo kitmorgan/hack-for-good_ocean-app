@@ -12,7 +12,7 @@ CREATE TABLE events(
 event_id SERIAL,
 name varchar(250) NOT NULL,
 description varchar (500),
-date date NOT NULL,
+date varchar(250) NOT NULL,
 beach_id int NOT NULL,
 CONSTRAINT pk_events PRIMARY KEY (event_id),
 CONSTRAINT fk_beachId FOREIGN KEY (beach_id) REFERENCES beaches (beach_id));
