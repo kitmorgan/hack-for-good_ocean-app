@@ -24,23 +24,26 @@ class Events extends Component {
       console.log(event);
 
       return (
-        <Card hoverable>
-          <div>
-            <Title level={4}>{event.name}</Title>
-            <img
-              width={200}
-              src="https://assets1.cbsnewsstatic.com/hub/i/r/2011/06/29/441f00d4-a643-11e2-a3f0-029118418759/thumbnail/620x465/3c495022ddcdaa44c93a4b4bf871958f/dirtybeach_istock_000015037586.jpg"
-              alt={"dirty beach"}
-            />
-          </div>
-          <p>{event.description}</p>
-          <div>
+        <>
+          <Col xs={24} sm={12} lg={8} key={i}></Col>
+          <Card hoverable>
             <div>
-              <Text>{event.date} </Text>
+              <Title level={4}>{event.name}</Title>
+              <img
+                width={200}
+                src="https://assets1.cbsnewsstatic.com/hub/i/r/2011/06/29/441f00d4-a643-11e2-a3f0-029118418759/thumbnail/620x465/3c495022ddcdaa44c93a4b4bf871958f/dirtybeach_istock_000015037586.jpg"
+                alt={"dirty beach"}
+              />
             </div>
-            <Text>{event.name}</Text>
-          </div>{" "}
-        </Card>
+            <p>{event.description}</p>
+            <div>
+              <div>
+                <Text>{event.date} </Text>
+              </div>
+              <Text>{event.name}</Text>
+            </div>{" "}
+          </Card>
+        </>
       );
 
       //   );
@@ -49,7 +52,7 @@ class Events extends Component {
       <>
         <h1> Active Events</h1>
         <div>
-          <Row gutter={[32, 32]} className="crypto-card-container">
+          <Row gutter={[32, 32]}>
             <div>{eventMap}</div>
           </Row>
         </div>
