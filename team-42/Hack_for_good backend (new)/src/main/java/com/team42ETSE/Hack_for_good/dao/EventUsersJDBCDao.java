@@ -3,12 +3,16 @@ package com.team42ETSE.Hack_for_good.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.team42ETSE.Hack_for_good.model.Email;
+import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import com.team42ETSE.Hack_for_good.model.Event;
 import com.team42ETSE.Hack_for_good.model.EventUsers;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 @Component
 public class EventUsersJDBCDao implements EventUserDAO {
 	
@@ -32,6 +36,13 @@ public class EventUsersJDBCDao implements EventUserDAO {
 	            eventUsers.add(user);
 	        }
 	        return eventUsers;
+	}
+
+	@Override
+	@ResponseStatus(HttpStatus.CREATED)
+	public void addEventUsers(int event_id, Email email) {
+		String sql = "INSERT INTO event_users (email, event_id) VALUES (?, ?);";
+		jdbcTemplate.update(sql, email.getEmail(), event_id);
 	}
 
 }

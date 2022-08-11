@@ -2,10 +2,8 @@ package com.team42ETSE.Hack_for_good.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import com.team42ETSE.Hack_for_good.model.Email;
+import org.springframework.web.bind.annotation.*;
 
 import com.team42ETSE.Hack_for_good.dao.EventUserDAO;
 import com.team42ETSE.Hack_for_good.model.EventUsers;
@@ -23,8 +21,13 @@ public class EventUsersController {
 
 
 	@GetMapping(path = "/eventUsers/{eventid}")
-	public List<EventUsers> getEventUserss(@PathVariable int eventid) {
+	public List<EventUsers> getEventUsers(@PathVariable int eventid) {
         return eventUserDao.getEventUsers(eventid);
     }
+
+	@PostMapping(path = "/eventUsers/{eventid}/signup")
+	public void addEventUser(@PathVariable int eventid, @RequestBody Email email){
+		eventUserDao.addEventUsers(eventid, email);
+	}
 
 }
