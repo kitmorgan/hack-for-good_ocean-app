@@ -40,14 +40,14 @@ INSERT INTO events (name, description, date, beach_id) VALUES ('Santa Monica Bea
 INSERT INTO events (name, description, date, beach_id) VALUES ('Cape May Beach','Come down to the shore for our community clean-up day', '2022-08-15', 3);
 INSERT INTO events (name, description, date, beach_id) VALUES ('Panama City Beach','Beautifying the most beautiful beach in the world', '2022-08-24', 2);
 
-INSERT INTO event_users VALUES (1, 'hakeem@gmail.com');
-INSERT INTO event_users VALUES (1, 'kit@gmail.com');
-INSERT INTO event_users VALUES (1, 'erasmus@gmail.com');
-INSERT INTO event_users VALUES (1, 'kongyue@gmail.com');
-INSERT INTO event_users VALUES (1, 'adam@gmail.com');
-INSERT INTO event_users VALUES (1, 'serref@gmail.com');
-INSERT INTO event_users VALUES (1, 'jen@gmail.com');
-INSERT INTO event_users VALUES (1, 'pradeep@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'hakeem@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'kit@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'erasmus@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'kongyue@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'adam@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'serref@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'jen@gmail.com');
+INSERT INTO event_users (event_id, email) VALUES (1, 'pradeep@gmail.com');
 
 
 COMMIT;
