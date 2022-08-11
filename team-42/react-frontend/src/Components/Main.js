@@ -41,27 +41,6 @@ const Main = () => (
         {" "}
         Life Underwater
       </h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        {" "}
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia in
-        doloremque quidem nihil recusandae quia repellat unde assumenda vero
-        error tempore perferendis, cupiditate fugit quasi. Iusto laudantium odio
-        nesciunt accusantium.
-      </div>
-      <Footer
-        style={{
-          textAlign: "center",
-        }}
-      >
-        Life Underwater Created for Chase Hack For Good
-      </Footer>
     </Layout>
     <Switch>
       <Route path="/plan" component={postEvent}></Route>
