@@ -1,21 +1,39 @@
 import React, { Component } from "react";
 import { withRouter, NavLink } from "react-router-dom";
 import 'antd/dist/antd.css';
-/*import './index.css';*/
-import { Button, DatePicker, Form, Input } from 'antd';
+import { Button, DatePicker, Form, Input, Select } from 'antd';
+
+const { Option } = Select;
+
+const layout = {
+  labelCol: {
+    span: 4,
+  },
+  wrapperCol: {
+    span: 8,
+  },
+};
 
 export function PostEvent() {
   return (
-      <Form name="nest-messages">
+      <Form {...layout} name="nest-messages">
         <Form.Item
-          name={['user', 'name']}
+          name="name"
           label="Beach Name"
           rules={[
             {
               required: true
             },
           ]}>
-          <Input />
+          <Select
+            placeholder="Select a option and change input text above"
+            allowClear
+          >
+            <Option value="galvestonBeach">Galveston Beach</Option>
+            <Option value="santaMonicaBeach">Santa Monica Beach</Option>
+            <Option value="capeMayBeach">Cape May Beach</Option>
+            <Option value="panamaCityBeach">Panama City Beach</Option>
+          </Select>
         </Form.Item>
     
         <Form.Item 
@@ -33,7 +51,10 @@ export function PostEvent() {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button 
+          type="primary" 
+          htmlType="submit"
+          >
             Submit
           </Button>
         </Form.Item>
