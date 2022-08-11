@@ -2,10 +2,7 @@ package com.team42ETSE.Hack_for_good.controller;
 
 import com.team42ETSE.Hack_for_good.dao.EventDao;
 import com.team42ETSE.Hack_for_good.model.Event;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +22,7 @@ public class EventController {
     }
 
     @PostMapping("/create-event")
-    public Event createEvent(Event event) {
+    public Event createEvent(@RequestBody Event event) {
         return eventDao.createEvent(event);
     }
 }
