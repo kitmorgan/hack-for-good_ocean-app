@@ -33,4 +33,14 @@ public class EventJDBCdao implements EventDao{
         }
         return events;
     }
+
+    @Override
+    public Event createEvent(Event event){
+        String sql = "INSERT INTO events (name, description, date, beach_id) VALUES (?, ?, ?, ?) RETURNING event_id;";
+        Integer newId = jdbcTemplate.queryForObject(sql, Integer.class, event.getName(), event.getDescription(), event.getDate(), event.getBeach_id());
+        event.setEvent_id(newId);
+
+        return event;
+    }
+
 }
