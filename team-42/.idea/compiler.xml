@@ -7,14 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="LifeUnderWater-backend" />
+        <module name="Hack_for_good" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Hack_for_good" target="11" />
       <module name="LifeUnderWater-backend" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Hack_for_good" options="-parameters" />
       <module name="LifeUnderWater-backend" options="-parameters" />
     </option>
   </component>

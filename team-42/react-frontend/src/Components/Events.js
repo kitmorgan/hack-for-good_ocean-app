@@ -31,11 +31,19 @@ export function EventCard() {
 class Events extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      events: [],
+    };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    fetch("http://localhost:8080/events")
+      .then((res) => res.json())
+      .then((res) => this.setState({ events: res }));
+  }
 
   render() {
+    console.log(this.state.events);
     return (
       <>
         <h1> test test</h1>
