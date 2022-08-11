@@ -35,10 +35,10 @@ INSERT INTO beaches (img_link, beach_name, location) VALUES ('https://assets3.th
 INSERT INTO beaches (img_link, beach_name, location) VALUES ('https://absearesorts.com/wp-content/uploads/2020/06/pleasure-pier.jpg', 'Galveston Beach', 'Texas');
 INSERT INTO beaches (img_link, beach_name, location) VALUES ('https://ourgulfshoresvacation.com/wp-content/uploads/2017/04/welcome-to-paradise.jpg', 'Gulf Shores Beach', 'Alabama');
 
-INSERT INTO events (name, description, date, beach_id) VALUES ('Galveston Beach','Help keep our Texas beaches clean!', '2022-08-22', 8);
-INSERT INTO events (name, description, date, beach_id) VALUES ('Santa Monica Beach','Join us this Saturday for a Santa Monica Beach clean-up', '2022-08-17', 6);
-INSERT INTO events (name, description, date, beach_id) VALUES ('Cape May Beach','Come down to the shore for our community clean-up day', '2022-08-15', 3);
-INSERT INTO events (name, description, date, beach_id) VALUES ('Panama City Beach','Beautifying the most beautiful beach in the world', '2022-08-24', 2);
+INSERT INTO events (name, description, date, beach_id) VALUES ('The Monthly Galveston Beach Clean-up','Help keep our Texas beaches clean!', '2022-08-22', 8);
+INSERT INTO events (name, description, date, beach_id) VALUES ('Live Music and Beach Clean-up','Join us this Saturday for a Santa Monica Beach clean-up', '2022-08-17', 6);
+INSERT INTO events (name, description, date, beach_id) VALUES ('National Clean-up Day: Cape May Beach','Come down to the shore for our community clean-up day', '2022-08-15', 3);
+INSERT INTO events (name, description, date, beach_id) VALUES ('Friends of Panama City - Community Clean-up','Beautifying the most beautiful beach in the world', '2022-08-24', 2);
 
 INSERT INTO event_users (event_id, email) VALUES (1, 'hakeem@gmail.com');
 INSERT INTO event_users (event_id, email) VALUES (1, 'kit@gmail.com');
