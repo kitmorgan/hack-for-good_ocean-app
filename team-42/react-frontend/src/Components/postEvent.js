@@ -126,10 +126,10 @@ class postEvent extends Component {
                 placeholder="Select a option and change input text above"
                 allowClear
               >
-                <Option value="galvestonBeach">Galveston Beach</Option>
-                <Option value="santaMonicaBeach">Santa Monica Beach</Option>
-                <Option value="capeMayBeach">Cape May Beach</Option>
-                <Option value="panamaCityBeach">Panama City Beach</Option>
+                <Option value="Galveston Beach">Galveston Beach</Option>
+                <Option value="Santa Monica Beach">Santa Monica Beach</Option>
+                <Option value="Cape May Beach">Cape May Beach</Option>
+                <Option value="Panama City Beach">Panama City Beach</Option>
               </Select>
             </Form.Item>
 

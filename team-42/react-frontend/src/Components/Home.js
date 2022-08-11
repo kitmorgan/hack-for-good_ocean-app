@@ -1,36 +1,62 @@
 import React, { Component } from "react";
-import { withRouter, NavLink } from "react-router-dom";
-import { Carousel } from "antd";
+import { withRouter, NavLink, Link } from "react-router-dom";
+import { Layout, Typography, Row, Col, Avatar, Card } from "antd";
 
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+const { Text, Title } = Typography;
 
-const Home = () => {
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      events: [],
+    };
+  }
 
-  return (
-    <Carousel afterChange={onChange}>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
-    </Carousel>
-  );
-};
+  componentDidMount() {
+    fetch("http://localhost:8080/events")
+      .then((res) => res.json())
+      .then((res) => this.setState({ events: res }));
+  }
 
+  render() {
+    console.log(this.state.events);
+    const newEvents = this.state.events.slice(-3);
+    const eventMap = newEvents.map((event, i) => {
+      console.log(event);
+
+      return (
+        <>
+          <Col xs={24} sm={12} lg={8} key={i}></Col>
+          <Card hoverable>
+            <div>
+              <Title level={4}>{event.name}</Title>
+              <img
+                width={200}
+                src="https://assets1.cbsnewsstatic.com/hub/i/r/2011/06/29/441f00d4-a643-11e2-a3f0-029118418759/thumbnail/620x465/3c495022ddcdaa44c93a4b4bf871958f/dirtybeach_istock_000015037586.jpg"
+                alt={"dirty beach"}
+              />
+            </div>
+            <p>{event.description}</p>
+            <div>
+              <div>
+                <Text>{event.date} </Text>
+              </div>
+              <Text>{event.name}</Text>
+            </div>{" "}
+          </Card>
+        </>
+      );
+    });
+    return (
+      <>
+        <h1> Active Events</h1>
+        <div>
+          <Row gutter={[32, 32]}>
+            <div>{eventMap}</div>
+          </Row>
+        </div>
+      </>
+    );
+  }
+}
 export default withRouter(Home);
