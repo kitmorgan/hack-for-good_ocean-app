@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class LifeUnderWaterBackendApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LifeUnderWaterBackendApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LifeUnderWaterBackendApplication.class, args);
+    }
 
 }
