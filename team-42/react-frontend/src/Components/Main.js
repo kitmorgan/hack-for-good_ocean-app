@@ -16,7 +16,7 @@ const Main = () => (
           <Menu.Item key="2">Home</Menu.Item>
           <Menu.Item key="3">Organize Cleanup</Menu.Item>
           <Menu.Item key="1">
-            <NavLink to="/events"> Donate </NavLink>
+            <NavLink to="/events"> Events </NavLink>
           </Menu.Item>
           <Menu.Item key="4" style={{ marginLeft: "auto" }}>
             Logout
