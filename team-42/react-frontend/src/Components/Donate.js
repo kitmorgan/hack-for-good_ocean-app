@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import { Avatar, List } from "antd";
 const Donate = () => (
   <>
+    <h1>Don't have time? Donate instead!</h1>
     <div>
       <List itemLayout="horizontal" dataSource="none" />
       <List.Item>
