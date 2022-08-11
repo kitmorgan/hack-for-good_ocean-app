@@ -10,6 +10,16 @@ public class Event {
     private int beach_id;
     private String date;
 
+    public Event(){
+    };
+
+    public Event(int event_id, String name, String description, int beach_id, String date){
+        this.event_id = event_id;
+        this.name = name;
+        this.description = description;
+        this.beach_id = beach_id;
+        this.date = date;
+    }
 
     public int getEvent_id() {
         return event_id;
