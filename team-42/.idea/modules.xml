@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hack_for_good backend (new)/Hack_for_good.iml" filepath="$PROJECT_DIR$/Hack_for_good backend (new)/Hack_for_good.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LifeUnderWater-backend/LifeUnderWater-backend/LifeUnderWater-backend.iml" filepath="$PROJECT_DIR$/LifeUnderWater-backend/LifeUnderWater-backend/LifeUnderWater-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/team-42.iml" filepath="$PROJECT_DIR$/.idea/team-42.iml" />
     </modules>
   </component>

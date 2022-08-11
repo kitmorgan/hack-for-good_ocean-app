@@ -81,19 +81,21 @@ class postEvent extends Component {
 
   postNewEvent(name, description, beach_id) {
     const eventObject = {
-      name: name,
-      description: description,
-      date: this.state.date,
       beach_id: 3,
+      date: this.state.date,
+      description: description,
+      name: name,
     };
     console.log(eventObject);
     fetch("http://localhost:8080/create-event", {
       method: "POST",
       body: JSON.stringify(eventObject),
       headers: {
-        "Content-type": "applications/json",
+        "Content-type": "application/json;",
       },
       credentials: "same-origin",
+    }).then((response) => {
+      console.log(response.status);
     });
     console.log(eventObject);
   }
@@ -141,7 +143,7 @@ class postEvent extends Component {
             >
               {" "}
               <DatePicker
-                format="YYYY-DD-MM"
+                format="YYYY-MM-DD"
                 onChange={(e, s) =>
                   this.setState({ date: s }, console.log(this.state.date))
                 }
