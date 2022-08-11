@@ -9,12 +9,12 @@ public class Event {
     private String name;
     private String description;
     private int beach_id;
-    private LocalDate date;
+    private String date;
 
     public Event(){
     };
 
-    public Event(int event_id, String name, String description, int beach_id, LocalDate date){
+    public Event(int event_id, String name, String description, int beach_id, String date){
         this.event_id = event_id;
         this.name = name;
         this.description = description;
@@ -54,11 +54,11 @@ public class Event {
         this.beach_id = beach_id;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

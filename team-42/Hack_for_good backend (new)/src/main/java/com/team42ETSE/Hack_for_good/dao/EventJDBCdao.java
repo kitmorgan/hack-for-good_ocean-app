@@ -26,7 +26,7 @@ public class EventJDBCdao implements EventDao{
             Event event = new Event();
             event.setEvent_id(result.getInt("event_id"));
             event.setBeach_id(result.getInt("beach_id"));
-            event.setDate(result.getDate("date").toLocalDate());
+            event.setDate(result.getString("date"));
             event.setName(result.getString("name"));
             event.setDescription(result.getString("description"));
             events.add(event);
