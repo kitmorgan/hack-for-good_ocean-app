@@ -4,5 +4,5 @@ public class Event {
 
     private int eventId;
     private String name;
-    private String
+    private String description;
 }
