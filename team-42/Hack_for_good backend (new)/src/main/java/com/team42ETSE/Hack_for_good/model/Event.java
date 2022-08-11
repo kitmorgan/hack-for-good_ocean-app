@@ -1,5 +1,6 @@
 package com.team42ETSE.Hack_for_good.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Event {
@@ -8,12 +9,12 @@ public class Event {
     private String name;
     private String description;
     private int beach_id;
-    private String date;
+    private LocalDate date;
 
     public Event(){
     };
 
-    public Event(int event_id, String name, String description, int beach_id, String date){
+    public Event(int event_id, String name, String description, int beach_id, LocalDate date){
         this.event_id = event_id;
         this.name = name;
         this.description = description;
@@ -53,11 +54,11 @@ public class Event {
         this.beach_id = beach_id;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

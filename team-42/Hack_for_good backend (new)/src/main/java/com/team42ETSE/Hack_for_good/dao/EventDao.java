@@ -8,4 +8,6 @@ public interface EventDao {
 
     public List<Event> getEvents();
 
+    public Event createEvent(Event event);
+
 }

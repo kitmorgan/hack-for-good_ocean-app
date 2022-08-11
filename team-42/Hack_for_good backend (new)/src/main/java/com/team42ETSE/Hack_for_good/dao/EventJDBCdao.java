@@ -26,11 +26,21 @@ public class EventJDBCdao implements EventDao{
             Event event = new Event();
             event.setEvent_id(result.getInt("event_id"));
             event.setBeach_id(result.getInt("beach_id"));
-            event.setDate(result.getString("date"));
+            event.setDate(result.getDate("date").toLocalDate());
             event.setName(result.getString("name"));
             event.setDescription(result.getString("description"));
             events.add(event);
         }
         return events;
     }
+
+    @Override
+    public Event createEvent(Event event){
+        String sql = "INSERT INTO events (name, description, date, beach_id) VALUES (?, ?, ?, ?) RETURNING event_id;";
+        Integer newId = jdbcTemplate.queryForObject(sql, Integer.class, event.getName(), event.getDescription(), event.getDate(), event.getBeach_id());
+        event.setEvent_id(newId);
+
+        return event;
+    }
+
 }
