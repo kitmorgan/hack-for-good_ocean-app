@@ -3,6 +3,7 @@ import React from "react";
 import Events from "../Components/Events";
 import postEvent from "../Components/postEvent";
 import Home from "../Components/Home";
+import Donate from "../Components/Donate";
 
 import { Switch, Route, Redirect, NavLink, Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
@@ -24,7 +25,7 @@ const Main = () => (
             <NavLink to="/events"> Events </NavLink>
           </Menu.Item>
           <Menu.Item key="4" style={{ marginLeft: "auto" }}>
-            Logout
+            <NavLink to="/donate"> Donate </NavLink>
           </Menu.Item>
         </Menu>
       </Header>
@@ -49,6 +50,7 @@ const Main = () => (
       <Route path="/home" component={Home}></Route>
       <Route path="/plan" component={postEvent}></Route>
       <Route path="/events" component={Events}></Route>{" "}
+      <Route path="/donate" component={Donate}></Route>{" "}
     </Switch>
   </>
 );
