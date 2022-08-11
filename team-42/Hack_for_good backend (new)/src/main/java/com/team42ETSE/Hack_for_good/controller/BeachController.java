@@ -22,4 +22,6 @@ public class BeachController {
     public List<Beaches> getBeaches() {
         return beachDao.getBeaches();
     }
+
+
 }
