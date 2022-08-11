@@ -25,15 +25,15 @@ CONSTRAINT pk_event_user PRIMARY KEY (event_user_id),
 CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES events (event_id));
 
 
-INSERT INTO beaches VALUES (null, 'Myrtle Beach', 'Florida');
-INSERT INTO beaches VALUES (null, 'Panama City Beach', 'Florida');
-INSERT INTO beaches VALUES (null, 'Cape May Beach', 'New Jersey');
-INSERT INTO beaches VALUES (null, 'Venice Beach', 'California');
-INSERT INTO beaches VALUES (null, 'Fort Lauderdale Beach', 'Florida');
-INSERT INTO beaches VALUES (null, 'Santa Monica Beach', 'California');
-INSERT INTO beaches VALUES (null, 'Ocean City Beach', 'Maryland');
-INSERT INTO beaches VALUES (null, 'Galveston Beach', 'Texas');
-INSERT INTO beaches VALUES (null, 'Gulf Shores Beach', 'Alabama');
+INSERT INTO beaches VALUES ('https://www.beach-vacation.com/wp-content/uploads/2022/01/myrtle-beach-vacation.jpg', 'Myrtle Beach', 'Florida');
+INSERT INTO beaches VALUES ('https://www.worldatlas.com/r/w768/upload/bc/ac/79/shutterstock-1803023797.jpg', 'Panama City Beach', 'Florida');
+INSERT INTO beaches VALUES ('https://assets3.thrillist.com/v1/image/2990932/1200x600/scale;', 'Cape May Beach', 'New Jersey');
+INSERT INTO beaches VALUES ('https://www.visitcalifornia.com/sites/visitcalifornia.com/files/VC_California101_VeniceBeach_Stock_RF_638340372_1280x640.jpg', 'Venice Beach', 'California');
+INSERT INTO beaches VALUES ('https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_640,q_75,w_1000/https://assets.simpleviewcms.com/simpleview/image/upload/v1/clients/ftlauderdale/AJR_FTL_Beach_0364_1__02d4d0a7-c538-42dc-ae3d-89f575ba4bf8.png', 'Fort Lauderdale Beach', 'Florida');
+INSERT INTO beaches VALUES ('https://www.exp1.com/blog/wp-content/uploads/sites/7/2020/08/Santa-Monica-Pier-e1597077705511-1024x635.jpg', 'Santa Monica Beach', 'California');
+INSERT INTO beaches VALUES ('https://assets3.thrillist.com/v1/image/2991681/1200x630/flatten;crop_down;webp=auto;jpeg_quality=70', 'Ocean City Beach', 'Maryland');
+INSERT INTO beaches VALUES ('https://absearesorts.com/wp-content/uploads/2020/06/pleasure-pier.jpg', 'Galveston Beach', 'Texas');
+INSERT INTO beaches VALUES ('https://ourgulfshoresvacation.com/wp-content/uploads/2017/04/welcome-to-paradise.jpg', 'Gulf Shores Beach', 'Alabama');
 
 INSERT INTO events VALUES ('Galveston Beach','Help keep our Texas beaches clean!', '2022-08-22', 8);
 INSERT INTO events VALUES ('Santa Monica Beach','Join us this Saturday for a Santa Monica Beach clean-up', '2022-08-17', 6);
