@@ -2,6 +2,7 @@ import { Layout, Menu } from "antd";
 import React from "react";
 import Events from "../Components/Events";
 import postEvent from "../Components/postEvent";
+import Home from "../Components/Home";
 
 import { Switch, Route, Redirect, NavLink, Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
@@ -13,7 +14,9 @@ const Main = () => (
     <Layout className="layout">
       <Header>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1">Home</Menu.Item>
+          <Menu.Item key="1">
+            <NavLink to="/home"> Home </NavLink>
+          </Menu.Item>
           <Menu.Item key="2">
             <NavLink to="/plan"> Organize Cleanup </NavLink>
           </Menu.Item>
@@ -43,6 +46,7 @@ const Main = () => (
       </h1>
     </Layout>
     <Switch>
+      <Route path="/home" component={Home}></Route>
       <Route path="/plan" component={postEvent}></Route>
       <Route path="/events" component={Events}></Route>{" "}
     </Switch>
